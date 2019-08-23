@@ -46,7 +46,7 @@ $out = sendMsg($botToken,$chatId,"Mike o Rug",$inlineKB,"inline");
 
 //Rispondiamo HelloWorld
 //We answer HelloWorld
-$out = sendMsg($botToken,$chatId,"Invio un messaggio!");
+//$out = sendMsg($botToken,$chatId,"Invio un messaggio!");
 
 //Salvo il json ricevuto per analizzarlo in seguito
 //We save the json received to parse it later
