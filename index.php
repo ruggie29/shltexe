@@ -41,7 +41,7 @@ $chatId = $MessageObj['chat']['id'];
 
 $inlineKB = '[{"text" : "Mike è bell", "url" : "https://www.google.com"},{"text" : "Rug è bell", "url" : "https://ettoremorettiblog.it"}]';
 //$inlineKB = '[{"text" : "Mike è bell"}]';
-$out = sendMsg($botToken,$chatId,"Mike o Rug",$inlineKB,"inline");
+$out = sendMsg($botToken,$chatId,"Mike o Rug?",$inlineKB,"inline");
 
 
 //Rispondiamo HelloWorld
