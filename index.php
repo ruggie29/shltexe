@@ -1,4 +1,3 @@
-
 <?php
 //è necessario aggiungere bot prima del nostro token
 //You must add bot before our token
@@ -24,7 +23,7 @@ $MessageObj = $update['message'];
 //Recuperiamo il chatId, che utilizzeremo per rispondere all'utente che ci ha appena invocato
 //We recover the chatId table which we will use to respond to the user who has just invoked
 $chatId = $MessageObj['chat']['id'];
-$chatId = '169745887';
+//$chatId = '169745887';
 
 //Salvo il json ricevuto per analizzarlo in seguito
 //We save the json received to parse it later
