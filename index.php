@@ -15,7 +15,7 @@ $update = json_decode($TelegramRawInput, TRUE);
 //Make sure you have received an update, otherwise we interrupt execute
 if(!$update)
 {
-  exit;
+  //exit;
 }
 
 //Recuperiamo l'oggetto message dal json
@@ -24,18 +24,34 @@ $MessageObj = $update['message'];
 //Recuperiamo il chatId, che utilizzeremo per rispondere all'utente che ci ha appena invocato
 //We recover the chatId table which we will use to respond to the user who has just invoked
 $chatId = $MessageObj['chat']['id'];
+$chatId = '169745887';
 
 //Salvo il json ricevuto per analizzarlo in seguito
 //We save the json received to parse it later
-saveInJsonFile($update, "ricevuto.json");
+//saveInJsonFile($update, "ricevuto.json");
+
+//Creaiamo una replykeyboard
+//We create a replykeabord
+
+$replyKB = '["Btn 1","Btn 2"],["Test"],["Inviami"]';
+
+$out = sendMsg($botToken,$chatId,"Invio un messaggio con una replyKeyboard!",$replyKB,"reply");
+
+//Creaiamo una inlineKeyboard
+//We create an inlineKeyboard
+
+$inlineKB = '[{"text" : "Vai su Google", "url" : "https://www.google.com"},{"text" : "Vai al Blog", "url" : "https://ettoremorettiblog.it"}]';
+
+$out = sendMsg($botToken,$chatId,"Invio un messaggio con una inlineKeyboard!",$inlineKB,"inline");
+
 
 //Rispondiamo HelloWorld
 //We answer HelloWorld
-$out = sendMsg($botToken,$chatId,"Hello World!");
+$out = sendMsg($botToken,$chatId,"Invio un messaggio!");
 
 //Salvo il json ricevuto per analizzarlo in seguito
 //We save the json received to parse it later
-saveInJsonFile($out, "inviato.json");
+//saveInJsonFile($out, "inviato.json");
 
 
 /**
@@ -46,7 +62,19 @@ saveInJsonFile($out, "inviato.json");
 
 //Funzione per far inviare un messaggio da parte del bot
 //Function to send a message from the bot
-function sendMsg($tkn, $cId, $msgTxt){
+function sendMsg($tkn, $cId, $msgTxt, $tastiera = null, $tipo = null){
+
+    //Controlliamo se è stata passata una tastiera e popoliamo il parametro reply_markup della sendMessage
+    $reply_markup = "";
+
+    if($tastiera != null ){
+        if($tipo == "inline"){
+            $reply_markup = '&reply_markup={"inline_keyboard":['.$tastiera.'],"resize_keyboard":true}';
+        }elseif($tipo == "reply"){
+            $reply_markup = '&reply_markup={"keyboard":['.$tastiera.'],"resize_keyboard":true}';
+        }
+    }
+
     /*
         Creiamo la URL per richiamare la API Telegram apposita, nel nostro caso sarà la sendMessage.
         Questa API richiede due parametri obbligatori, chatId e Testo del messaggio
@@ -57,8 +85,8 @@ function sendMsg($tkn, $cId, $msgTxt){
         This API requires two required parameters, chatId and message text 
         NOTE: the call to the API will GET, so it is recommended (strongly recommended) to send the text within a urlencode ().
     */
-    $TelegramUrlSendMessage = "https://api.telegram.org/".$tkn."/sendMessage?chat_id=".$cId."&text=".urlencode($msgTxt);
-    
+    $TelegramUrlSendMessage = "https://api.telegram.org/".$tkn."/sendMessage?chat_id=".$cId."&text=".urlencode($msgTxt).$reply_markup;
+
     //Come return della funzione restituiremo l'output di file_get_contents della URL appena creata.
     //As a return of the function we will return the output of file_get_contents of the URL just created.
     return file_get_contents($TelegramUrlSendMessage);
@@ -71,5 +99,4 @@ function saveInJsonFile($data, $filename){
         unlink($filename);
     file_put_contents($filename,json_encode($data,JSON_PRETTY_PRINT));
 }
-
 ?>
