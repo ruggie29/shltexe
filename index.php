@@ -39,9 +39,9 @@ $chatId = $MessageObj['chat']['id'];
 //Creaiamo una inlineKeyboard
 //We create an inlineKeyboard
 
-//$inlineKB = '[{"text" : "Vai su Google", "url" : "https://www.google.com"},{"text" : "Vai al Blog", "url" : "https://ettoremorettiblog.it"}]';
-$inlineKB = '[{"text" : "Mike è bell"}]';
-$out = sendMsg($botToken,$chatId,"Invio un messaggio con una inlineKeyboard!",$inlineKB,"inline");
+$inlineKB = '[{"text" : "Mike è bell", "url" : "https://www.google.com"},{"text" : "Rug è bell", "url" : "https://ettoremorettiblog.it"}]';
+//$inlineKB = '[{"text" : "Mike è bell"}]';
+$out = sendMsg($botToken,$chatId,"Mike o Rug",$inlineKB,"inline");
 
 
 //Rispondiamo HelloWorld
