@@ -32,15 +32,15 @@ $chatId = $MessageObj['chat']['id'];
 //Creaiamo una replykeyboard
 //We create a replykeabord
 
-$replyKB = '["Btn 1","Btn 2"],["Test"],["Inviami"]';
+//$replyKB = '["Btn 1","Btn 2"],["Test"],["Inviami"]';
 
-$out = sendMsg($botToken,$chatId,"Invio un messaggio con una replyKeyboard!",$replyKB,"reply");
+//$out = sendMsg($botToken,$chatId,"Invio un messaggio con una replyKeyboard!",$replyKB,"reply");
 
 //Creaiamo una inlineKeyboard
 //We create an inlineKeyboard
 
-$inlineKB = '[{"text" : "Vai su Google", "url" : "https://www.google.com"},{"text" : "Vai al Blog", "url" : "https://ettoremorettiblog.it"}]';
-
+//$inlineKB = '[{"text" : "Vai su Google", "url" : "https://www.google.com"},{"text" : "Vai al Blog", "url" : "https://ettoremorettiblog.it"}]';
+$inlineKB = '[{"text" : "Mike è bell"}]';
 $out = sendMsg($botToken,$chatId,"Invio un messaggio con una inlineKeyboard!",$inlineKB,"inline");
 
 
