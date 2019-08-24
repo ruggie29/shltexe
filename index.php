@@ -27,7 +27,7 @@ $chatId = $MessageObj['chat']['id'];
 
 //Salvo il json ricevuto per analizzarlo in seguito
 //We save the json received to parse it later
-//saveInJsonFile($update, "ricevuto.json");
+saveInJsonFile($update, "ricevuto.json");
 
 //Creaiamo una replykeyboard
 //We create a replykeabord
