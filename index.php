@@ -64,6 +64,7 @@ $out = sendMsg($botToken,$chatId,"Mike o Rug?",$inlineKB,"inline");
 
 //Funzione per far inviare un messaggio da parte del bot
 //Function to send a message from the bot
+/*
 function sendMsg($tkn, $cId, $msgTxt, $tastiera = null, $tipo = null){
 
     //Controlliamo se è stata passata una tastiera e popoliamo il parametro reply_markup della sendMessage
@@ -76,7 +77,7 @@ function sendMsg($tkn, $cId, $msgTxt, $tastiera = null, $tipo = null){
             $reply_markup = '&reply_markup={"keyboard":['.$tastiera.'],"resize_keyboard":true}';
         }
     }
-
+*/
     /*
         Creiamo la URL per richiamare la API Telegram apposita, nel nostro caso sarà la sendMessage.
         Questa API richiede due parametri obbligatori, chatId e Testo del messaggio
@@ -91,7 +92,7 @@ function sendMsg($tkn, $cId, $msgTxt, $tastiera = null, $tipo = null){
 
     //Come return della funzione restituiremo l'output di file_get_contents della URL appena creata.
     //As a return of the function we will return the output of file_get_contents of the URL just created.
-    return file_get_contents($TelegramUrlSendMessage);
+/*    return file_get_contents($TelegramUrlSendMessage);
 }
 
 //Questa è la funzione che utilizzo per salvare il json nei file
@@ -101,4 +102,5 @@ function saveInJsonFile($data, $filename){
         unlink($filename);
     file_put_contents($filename,json_encode($data,JSON_PRETTY_PRINT));
 }
-?>
+?>*/
+
