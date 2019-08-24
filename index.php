@@ -4,7 +4,7 @@
 $botToken = "bot"."969847936:AAEHT-nNJsOTRSyqhJeazDm3TCh1ZaBd1XU";
 
 
-include function.php;
+include "function.php";
 
 //Recuperiamo l'input che riceveremo dal bot
 //We retrieve the input we receive from bot
