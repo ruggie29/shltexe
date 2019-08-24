@@ -43,7 +43,7 @@ saveInJsonFile($update, "ricevuto.json");
 //Creaiamo una inlineKeyboard
 //We create an inlineKeyboard
 
-$inlineKB = '[{"text" : "Mike è bell", "url" : "https://www.google.com"},{"text" : "Rug è bell", "url" : "https://ettoremorettiblog.it"}]';
+$inlineKB = '[{"text" : "Mike è bell", "text": "NO!" },{"text" : "Rug è bell",  "text": "BRAVO!"}]';
 //$inlineKB = '[{"text" : "Mike è bell"}]';
 $out = sendMsg($botToken,$chatId,"Mike o Rug?",$inlineKB,"inline");
 
