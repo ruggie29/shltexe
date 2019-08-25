@@ -54,9 +54,9 @@ switch ($Testo)
 {
   case '/staff':
     $out = sendMsg($botToken,$chatId,"Il comando staff è stato richiamato. Di seguito le informazioni:
-    Nome utente:$Name;
-    Tag Telegram:@$Tag;
-    Data: $dataìe;");
+<b>Nome utente</b>:$Name;
+Tag Telegram:@$Tag;
+Data: $date;");
 break;
 }
 
