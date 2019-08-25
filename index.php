@@ -52,7 +52,7 @@ saveInJsonFile($update, "ricevuto.json");
 switch ($Testo)
 {
   case '/staff':
-    $out = sendMsg($botToken,$chatId,"porca madonna");
+    $out = sendMsg($botToken,$chatId,"Il comando staff è stato richiamato da:$Name");
 break;
 }
 
