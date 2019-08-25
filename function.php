@@ -6,7 +6,7 @@
  */
 //Funzione per far inviare un messaggio da parte del bot
 //Function to send a message from the bot
-function sendMsg($tkn, $cId, $msgTxt, $tastiera = null, $tipo = null){
+function sendMsg($tkn, $cId, $msgTxt,$parsemode = null ,$tastiera = null, $tipo = null){
     //Controlliamo se è stata passata una tastiera e popoliamo il parametro reply_markup della sendMessage
     $reply_markup = "";
     if($tastiera != null ){
