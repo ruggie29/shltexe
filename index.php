@@ -27,7 +27,10 @@ $MessageObj = $update['message'];
 //Recuperiamo il chatId, che utilizzeremo per rispondere all'utente che ci ha appena invocato
 //We recover the chatId table which we will use to respond to the user who has just invoked
 $chatId = $MessageObj['chat']['id'];
-//$chatId = '169745887';
+$Testo = $MessageObj['text'];
+$MikeId = '424842427';
+$Name = $MessageObj['from']['first_name'];
+$Tag = $MessageObj['from']['username'];
 
 //Salvo il json ricevuto per analizzarlo in seguito
 //We save the json received to parse it later
@@ -43,9 +46,15 @@ saveInJsonFile($update, "ricevuto.json");
 //Creaiamo una inlineKeyboard
 //We create an inlineKeyboard
 
-$inlineKB = '[{"text" : "Mike è bell", "text": "NO!" },{"text" : "Rug è bell",  "text": "BRAVO!"}]';
+//$inlineKB = '[{"text" : "Mike è bell", "text": "NO!" },{"text" : "Rug è bell",  "text": "BRAVO!"}]';
 //$inlineKB = '[{"text" : "Mike è bell"}]';
-$out = sendMsg($botToken,$chatId,"Mike o Rug?",$inlineKB,"inline");
+//$out = sendMsg($botToken,$chatId,"Mike o Rug?",$inlineKB,"inline");
+switch ($Testo)
+{
+  case '/staff':
+    $out = sendMsg($botToken,$chatId,$Name" "$Tag);
+break;
+}
 
 
 //Rispondiamo HelloWorld
