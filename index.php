@@ -31,6 +31,7 @@ $Testo = $MessageObj['text'];
 $MikeId = '424842427';
 $Name = $MessageObj['from']['first_name'];
 $Tag = $MessageObj['from']['username'];
+$date = date('Y-m-d H:i:s');
 
 //Salvo il json ricevuto per analizzarlo in seguito
 //We save the json received to parse it later
@@ -52,7 +53,10 @@ saveInJsonFile($update, "ricevuto.json");
 switch ($Testo)
 {
   case '/staff':
-    $out = sendMsg($botToken,$chatId,"Il comando staff è stato richiamato da:$Name");
+    $out = sendMsg($botToken,$chatId,"Il comando staff è stato richiamato. Di seguito le informazioni:
+    Nome utente:$Name;
+    Tag Telegram:@$Tag;
+    Data: $dataìe;");
 break;
 }
 
