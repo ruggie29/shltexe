@@ -16,6 +16,11 @@ function sendMsg($tkn, $cId, $msgTxt,$parsemode = null ,$tastiera = null, $tipo 
             $reply_markup = '&reply_markup={"keyboard":['.$tastiera.'],"resize_keyboard":true}';
         }
     }
+    $mode = "";
+    if($pasrsmode != null){
+        $mode = '&parse_mode="HTML"';
+    }
+        
     /*
         Creiamo la URL per richiamare la API Telegram apposita, nel nostro caso sarà la sendMessage.
         Questa API richiede due parametri obbligatori, chatId e Testo del messaggio
