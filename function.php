@@ -17,9 +17,7 @@ function sendMsg($tkn, $cId, $msgTxt,$tastiera = null, $tipo = null){
         }
     }
     $mode = "";
-    if($pasrsmode != null){
-        $mode = '&parse_mode="HTML"';
-    }
+  
         /*
         Creiamo la URL per richiamare la API Telegram apposita, nel nostro caso sarà la sendMessage.
         Questa API richiede due parametri obbligatori, chatId e Testo del messaggio
@@ -33,7 +31,7 @@ function sendMsg($tkn, $cId, $msgTxt,$tastiera = null, $tipo = null){
     //As a return of the function we will return the output of file_get_contents of the URL just created.
     return file_get_contents($TelegramUrlSendMessage);
  
- 
+}
     function MemberCount($tkn, $cId, $msgTxt){
 
     $TelegramUrlSendMessage = "https://api.telegram.org/".$tkn."/getChatMembersCount?chat_id=".$cId."&parse_mode=HTML&text=".urlencode($msgTxt).$reply_markup;
