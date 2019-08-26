@@ -29,7 +29,7 @@ function sendMsg($tkn, $cId, $msgTxt,$parsemode = null ,$tastiera = null, $tipo 
         This API requires two required parameters, chatId and message text 
         NOTE: the call to the API will GET, so it is recommended (strongly recommended) to send the text within a urlencode ().
     */
-    $TelegramUrlSendMessage = "https://api.telegram.org/".$tkn."/sendMessage?chat_id=".$cId."&text=".urlencode($msgTxt).$reply_markup;
+    $TelegramUrlSendMessage = "https://api.telegram.org/".$tkn."/sendMessage?chat_id=".$cId."&parse_mode=HTML&text=".urlencode($msgTxt).$reply_markup;
     //Come return della funzione restituiremo l'output di file_get_contents della URL appena creata.
     //As a return of the function we will return the output of file_get_contents of the URL just created.
     return file_get_contents($TelegramUrlSendMessage);
