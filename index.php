@@ -3,8 +3,6 @@
 
 $botToken = "bot"."969847936:AAEHT-nNJsOTRSyqhJeazDm3TCh1ZaBd1XU";
 
-
-<?php
 //è necessario aggiungere bot prima del nostro token
 //You must add bot before our token
 
