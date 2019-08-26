@@ -7,7 +7,6 @@ $botToken = "bot"."969847936:AAEHT-nNJsOTRSyqhJeazDm3TCh1ZaBd1XU";
 <?php
 //è necessario aggiungere bot prima del nostro token
 //You must add bot before our token
-$botToken = "bot"."589789293:AAGfEsknWMFSSayCUWqSZIZePRx9mGm8NXY";
 
 //Recuperiamo l'input che riceveremo dal bot
 //We retrieve the input we receive from bot
