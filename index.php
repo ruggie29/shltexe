@@ -26,7 +26,8 @@ $MessageObj = $update['message'];
 //Recuperiamo il chatId, che utilizzeremo per rispondere all'utente che ci ha appena invocato
 //We recover the chatId table which we will use to respond to the user who has just invoked
 $chatId = $MessageObj['chat']['id'];
-
+$MikeId = "424842427";
+$testo = $MessageObj['text'];
 
 //Salvo il json ricevuto per analizzarlo in seguito
 //We save the json received to parse it later
@@ -35,17 +36,12 @@ $chatId = $MessageObj['chat']['id'];
 //Creaiamo una replykeyboard
 //We create a replykeabord
 
-$replyKB = '["Btn 1","Btn 2"],["Test"],["Inviami"]';
-
-$out = sendMsg($botToken,$chatId,"Invio un messaggio con una replyKeyboard!",$replyKB,"reply");
-
-//Creaiamo una inlineKeyboard
-//We create an inlineKeyboard
-
-$inlineKB = '[{"text" : "Vai su Google", "url" : "https://www.google.com"},{"text" : "Vai al Blog", "url" : "https://ettoremorettiblog.it"}]';
-
-$out = sendMsg($botToken,$chatId,"Invio un messaggio con una inlineKeyboard!",$inlineKB,"inline");
-
+switch($testo)
+{
+  case '/staff':
+    $out = sendMsg($botToken,$chatId,"Hello World!");
+    break;
+}
 
 //Rispondiamo HelloWorld
 //We answer HelloWorld
