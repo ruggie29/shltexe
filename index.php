@@ -60,6 +60,15 @@ Di seguito le informazioni:
 
 <b>Tag Telegram</b>: @$Tag;");
 break;
+    
+  case '.staff':
+    $out = sendMsg($botToken,$chatId,"Il comando staff è stato richiamato. 
+Di seguito le informazioni:
+
+<b>Nome utente</b>: $Name;
+
+<b>Tag Telegram</b>: @$Tag;");
+break;
 }
 
 
