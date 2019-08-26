@@ -1,6 +1,7 @@
 <?php
 
 include "function.php";
+include "db.php";
 
 //è necessario aggiungere bot prima del nostro token
 //You must add bot before our token
@@ -71,6 +72,12 @@ Di seguito le informazioni:
 
 <b>Tag Telegram</b>: @$Tag;");
 break;
+    
+  case '/db':
+    $Serch = mysql_query("SELECT CD_TELEGRAM FROM `RG0004E_FRIEND`");
+     $out = sendMsg($botToken,$chatId,$Serch);
+   break;
+   
 }
 
 
