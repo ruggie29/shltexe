@@ -32,13 +32,7 @@ function sendMsg($tkn, $cId, $msgTxt,$tastiera = null, $tipo = null){
     return file_get_contents($TelegramUrlSendMessage);
  
 }
-    function MemberCount($tkn, $cId, $msgTxt){
-
-    $TelegramUrlSendMessage = "https://api.telegram.org/".$tkn."/getChatMembersCount?chat_id=".$cId."&parse_mode=HTML&text=".urlencode($msgTxt).$reply_markup;
-    //Come return della funzione restituiremo l'output di file_get_contents della URL appena creata.
-    //As a return of the function we will return the output of file_get_contents of the URL just created.
-    return file_get_contents($TelegramUrlSendMessage);
-}
+ 
 //Questa è la funzione che utilizzo per salvare il json nei file
 //This is the function i use to save the json in file
 function saveInJsonFile($data, $filename){
