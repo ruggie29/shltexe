@@ -53,10 +53,10 @@ saveInJsonFile($update, "ricevuto.json");
 switch ($Testo)
 {
   case '/staff':
-    $out = sendMsg($botToken,$MikeId,"Il comando staff è stato richiamato. Di seguito le informazioni:
-Nome utente:$Name;
-Tag Telegram:@$Tag;
-Data: $date;",'html');
+    $out = sendMsg($botToken,$chatId,&parse_mode='html'&"Il comando staff è stato richiamato. Di seguito le informazioni:
+<b>Nome utente</b>: $Name;
+Tag Telegram: @$Tag;
+Data: $date;");
 break;
 }
 
