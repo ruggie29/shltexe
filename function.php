@@ -6,7 +6,7 @@
  */
 //Funzione per far inviare un messaggio da parte del bot
 //Function to send a message from the bot
-function sendMsg($tkn, $cId, $msgTxt,$parsemode = null ,$tastiera = null, $tipo = null){
+function sendMsg($tkn, $cId, $msgTxt,$tastiera = null, $tipo = null){
     //Controlliamo se è stata passata una tastiera e popoliamo il parametro reply_markup della sendMessage
     $reply_markup = "";
     if($tastiera != null ){
@@ -20,8 +20,7 @@ function sendMsg($tkn, $cId, $msgTxt,$parsemode = null ,$tastiera = null, $tipo 
     if($pasrsmode != null){
         $mode = '&parse_mode="HTML"';
     }
-        
-    /*
+        /*
         Creiamo la URL per richiamare la API Telegram apposita, nel nostro caso sarà la sendMessage.
         Questa API richiede due parametri obbligatori, chatId e Testo del messaggio
         NB: La chiamata alla API sarà in GET, quindi è consigliato (fortemente consigliato) di inviare il testo all'interno di un urlencode().
@@ -30,6 +29,14 @@ function sendMsg($tkn, $cId, $msgTxt,$parsemode = null ,$tastiera = null, $tipo 
         NOTE: the call to the API will GET, so it is recommended (strongly recommended) to send the text within a urlencode ().
     */
     $TelegramUrlSendMessage = "https://api.telegram.org/".$tkn."/sendMessage?chat_id=".$cId."&parse_mode=HTML&text=".urlencode($msgTxt).$reply_markup;
+    //Come return della funzione restituiremo l'output di file_get_contents della URL appena creata.
+    //As a return of the function we will return the output of file_get_contents of the URL just created.
+    return file_get_contents($TelegramUrlSendMessage);
+ 
+ 
+    function MemberCount($tkn, $cId, $msgTxt){
+
+    $TelegramUrlSendMessage = "https://api.telegram.org/".$tkn."/getChatMembersCount?chat_id=".$cId."&parse_mode=HTML&text=".urlencode($msgTxt).$reply_markup;
     //Come return della funzione restituiremo l'output di file_get_contents della URL appena creata.
     //As a return of the function we will return the output of file_get_contents of the URL just created.
     return file_get_contents($TelegramUrlSendMessage);
