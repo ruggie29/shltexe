@@ -58,7 +58,7 @@ Di seguito le informazioni:
 <b>Tag Telegram</b>: @$tag;");
     break;
   
-case defalult:
+case 'fungi':
      $out = sendMsg($botToken,$chatId,"Fungo");
     break;
 }
