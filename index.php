@@ -41,7 +41,16 @@ $tag =  $MessageObj['from']['username'];
 switch($testo)
 {
   case '/staff':
-    $out = sendMsg($botToken,$chatId,"Il comando staff è stato richiamato. 
+    $out = sendMsg($botToken,$MikeId,"Il comando staff è stato richiamato. 
+Di seguito le informazioni:
+
+<b>Nome utente</b>: $nome;
+
+<b>Tag Telegram</b>: @$tag;");
+    break;
+    
+  case '.staff':
+    $out = sendMsg($botToken,$MikeId,"Il comando staff è stato richiamato. 
 Di seguito le informazioni:
 
 <b>Nome utente</b>: $nome;
