@@ -75,7 +75,11 @@ break;
     
   case '/db':
     $Serch = mysql_query("SELECT CD_TELEGRAM FROM `RG0004E_FRIEND`");
-     $out = sendMsg($botToken,$chatId,$Serch);
+    while($LobbyCount = mysql_fetch_assoc($count))
+    {
+    	$ciao = $LobbyCount['CD_TELEGRAM'];
+    }
+     $out = sendMsg($botToken,$chatId,$ciao);
    break;
    
 }
