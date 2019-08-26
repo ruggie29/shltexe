@@ -28,6 +28,8 @@ $MessageObj = $update['message'];
 $chatId = $MessageObj['chat']['id'];
 $MikeId = "424842427";
 $testo = $MessageObj['text'];
+$nome =  $MessageObj['from']['first_name'];
+$tag =  $MessageObj['from']['username'];
 
 //Salvo il json ricevuto per analizzarlo in seguito
 //We save the json received to parse it later
@@ -39,13 +41,18 @@ $testo = $MessageObj['text'];
 switch($testo)
 {
   case '/staff':
-    $out = sendMsg($botToken,$chatId,"Hello World!");
+    $out = sendMsg($botToken,$chatId,"Il comando staff è stato richiamato. 
+Di seguito le informazioni:
+
+<b>Nome utente</b>: $nome;
+
+<b>Tag Telegram</b>: @$tag;");
     break;
 }
 
 //Rispondiamo HelloWorld
 //We answer HelloWorld
-$out = sendMsg($botToken,$chatId,"Invio un messaggio!");
+//$out = sendMsg($botToken,$chatId,"Invio un messaggio!");
 
 //Salvo il json ricevuto per analizzarlo in seguito
 //We save the json received to parse it later
@@ -83,7 +90,7 @@ function sendMsg($tkn, $cId, $msgTxt, $tastiera = null, $tipo = null){
         This API requires two required parameters, chatId and message text 
         NOTE: the call to the API will GET, so it is recommended (strongly recommended) to send the text within a urlencode ().
     */
-    $TelegramUrlSendMessage = "https://api.telegram.org/".$tkn."/sendMessage?chat_id=".$cId."&text=".urlencode($msgTxt).$reply_markup;
+    $TelegramUrlSendMessage = "https://api.telegram.org/".$tkn."/sendMessage?chat_id=".$cId."&parse_mode=HTML&text=".urlencode($msgTxt).$reply_markup;
 
     //Come return della funzione restituiremo l'output di file_get_contents della URL appena creata.
     //As a return of the function we will return the output of file_get_contents of the URL just created.
