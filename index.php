@@ -72,12 +72,7 @@ Di seguito le informazioni:
 
 <b>Tag Telegram</b>: @$Tag;");
 break;
-    
-  case '/conta':
-    $Serch = MemberCount($tkn, $cId, "cacca");
-    
-     $out = sendMsg($botToken,$chatId,"$Search");
-   break;
+
    
 }
 
