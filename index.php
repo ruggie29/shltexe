@@ -6,6 +6,7 @@ $botToken = "bot"."969847936:AAEHT-nNJsOTRSyqhJeazDm3TCh1ZaBd1XU";
 //è necessario aggiungere bot prima del nostro token
 //You must add bot before our token
 include "function.php";
+include "bandit.php"
 //Recuperiamo l'input che riceveremo dal bot
 //We retrieve the input we receive from bot
 $TelegramRawInput = file_get_contents("php://input");
@@ -30,18 +31,6 @@ $MikeId = "424842427";
 $testo = $MessageObj['text'];
 $nome =  $MessageObj['from']['first_name'];
 $tag =  $MessageObj['from']['username'];
-$cacca = "mod";
-//Salvo il json ricevuto per analizzarlo in seguito
-//We save the json received to parse it later
-//saveInJsonFile($update, "ricevuto.json");
-
-//Creaiamo una replykeyboard
-//We create a replykeabord
-
-if(stristr($testo, $cacca) !== FALSE)
-{
-  $out = sendMsg($botToken,$chatId,"Vai in bagno");
-}
 
 
 switch($testo)
