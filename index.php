@@ -27,7 +27,8 @@ $querydata = $query['data'];
 
 if($querydata = "povero")
 {
-  $out = sendMsg($botToken,$queryuser,"Sei povero");
+   $inlineKB = '[{"text" : "<<Torna al menù precedente", "callback_data" : "/inline"},{"text" : "Dove Pullare", "callback_data" : "povero"}]';
+  $out = sendMsg($botToken,$chatId,"<b>Sei un povero di merda!</b>",$inlineKB,"inline");
 }
 
 switch($testo)
