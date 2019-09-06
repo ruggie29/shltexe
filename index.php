@@ -38,7 +38,7 @@ $cacca = "cacca";
 //Creaiamo una replykeyboard
 //We create a replykeabord
 
-if(strpis($testo, $cacca) === FALSE)
+if(strpis($testo, $cacca) !== FALSE)
 {
   $out = sendMsg($botToken,$chatId,"Vai in bagno");
 }
