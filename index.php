@@ -25,10 +25,10 @@ $queryid = $query['id'];
 $queryuser = $query['from']['id'];
 $querydata = $query['data'];
 
-if($querydata = "povero")
-{
-  $out = sendMsg($botToken,$queryuser,"Sei povero");
-}
+//if($querydata = "povero")
+//{
+//  $out = sendMsg($botToken,$queryuser,"Sei povero");
+//}
 
 switch($testo)
 {
