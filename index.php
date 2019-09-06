@@ -25,9 +25,9 @@ $queryid = $query['id'];
 $queryuser = $query['from']['id'];
 $querydata = $query['data'];
 
-if($querydata == "Sei povero")
+if($querydata == "povero")
 {
-  $out = sendMsg($botToken,$chatId,"Sei povero");
+  $out = sendMsg($botToken,$queryuser,"Sei povero");
 }
 
 switch($testo)
@@ -40,7 +40,7 @@ case 'Fungi':
 break;
 
   case '/inline':
-    $inlineKB = '[{"text" : "Vai su Google", "url" : "https://www.google.com"},{"text" : "Dove Pullare", "callback_data" : "Sei povero"}]';
+    $inlineKB = '[{"text" : "Vai su Google", "url" : "https://www.google.com"},{"text" : "Dove Pullare", "callback_data" : "povero"}]';
     $out = sendMsg($botToken,$chatId,"<b>Invio un messaggio con una inlineKeyboard!</b>",$inlineKB,"inline");
   break;
         
