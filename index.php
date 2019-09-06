@@ -37,7 +37,7 @@ if($querydata == "back")
 {
   
     $inline2 = '[{"text" : "Vai su Google", "url" : "https://www.google.com"},{"text" : "Dove Pullare", "callback_data" : "povero"}]';
-     $out = editMsg($botToken,$queryuser,$querymsg,"Sono tornato indietro",$inline2,"inline");
+     $out = editMsg($botToken,$queryuser,$querymsg,"Cosa vuoi fare?",$inline2,"inline");
 }
 
 switch($testo)
@@ -51,7 +51,7 @@ break;
 
   case '/inline':
     $inlineKB = '[{"text" : "Vai su Google", "url" : "https://www.google.com"},{"text" : "Dove Pullare", "callback_data" : "povero"}]';
-    $out = sendMsg($botToken,$chatId,"Invio un messaggio con una inlineKeyboard!",$inlineKB,"inline");
+    $out = sendMsg($botToken,$chatId,"Cosa vuoi fare?",$inlineKB,"inline");
   break;
         
 }
