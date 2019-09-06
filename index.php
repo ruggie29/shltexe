@@ -27,9 +27,9 @@ $querydata = $query['data'];
 
 if($querydata = "povero")
 {
-  //$out = sendMsg($botToken,$queryuser,"<b>Cazzo pulli che sei povero?!</b>");
-  $inline2 = '[{"text" : "<<Indietro", "callback_data" : "back"},{"text" : "Dove Pullare", "callback_data" : "povero"}]';
-  $out = sendMsg($botToken,$queryuser,"Cazzo pulli che sei povero?",$inline2,"inline");
+  $out = sendMsg($botToken,$queryuser,"<b>Cazzo pulli che sei povero?!</b>");
+  //$inline2 = '[{"text" : "<<Indietro", "callback_data" : "back"},{"text" : "Dove Pullare", "callback_data" : "povero"}]';
+  //$out = sendMsg($botToken,$queryuser,"Cazzo pulli che sei povero?",$inline2,"inline");
 }
 
 if($querydata = "back")
