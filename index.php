@@ -20,15 +20,16 @@ $nome =  $MessageObj['from']['first_name'];
 $tag =  $MessageObj['from']['username'];
 $cacca = "mod";
 
- $inlineKB = '[{"text" : "Vai su Google", "url" : "https://www.google.com"},{"text" : "Vai al Blog", "url" : "https://ettoremorettiblog.it"}]';
-    $out = sendMsg($botToken,$chatId,"Invio un messaggio con una inlineKeyboard!",$inlineKB,"inline");
+
 
 
 switch($testo)
 {
 
 case 'Fungi':
-     $out = sendMsg($botToken,$chatId,"Fungo");
+     //$out = sendMsg($botToken,$chatId,"Fungo");
+     $inlineKB = '[{"text" : "Vai su Google", "url" : "https://www.google.com"},{"text" : "Vai al Blog", "url" : "https://ettoremorettiblog.it"}]';
+    $out = sendMsg($botToken,$chatId,"Invio un messaggio con una inlineKeyboard!",$inlineKB,"inline");
 break;
         
 }
