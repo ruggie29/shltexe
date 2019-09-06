@@ -32,14 +32,14 @@ if($querydata = "povero")
   $inline2 = '[{"text" : "<<Indietro", "callback_data" : "back"},{"text" : "Dove Pullare", "callback_data" : "povero"}]';
   $out = editMsg($botToken,$queryuser,$querymsg,"Cazzo pulli che sei povero?",$inline2,"inline");
 }
-/*
+
 if($querydata = "back")
 {
   
-    $inline2 = '[{"text" : "Vai su Google", "url" : "https://www.google.com"},{"text" : "Dove Pullare", "callback_data" : "no"}]';
-    $out = sendMsg($botToken,$queryuser,"Sono tornato indietro",$inline2,"inline");
+    $inline2 = '[{"text" : "Vai su Google", "url" : "https://www.google.com"},{"text" : "Dove Pullare", "callback_data" : "povero"}]';
+     $out = editMsg($botToken,$queryuser,$querymsg,,"Sono tornato indietro",$inline2,"inline");
 }
-*/
+
 switch($testo)
 {
 
