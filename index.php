@@ -20,7 +20,10 @@ $nome =  $MessageObj['from']['first_name'];
 $tag =  $MessageObj['from']['username'];
 $cacca = "mod";
 
-
+$query = $update['callback_query'];
+$queryid = $query['id'];
+$queryuser = $query['from']['id'];
+$querydata = $query['data'];
 
 
 switch($testo)
