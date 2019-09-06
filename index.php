@@ -25,6 +25,11 @@ switch($testo)
 
 case 'Fungi':
      $out = sendMsg($botToken,$chatId,"Fungo");
-    break;
+break;
+  case '\inline':
+    $inlineKB = '[{"text" : "Mike è bell", "text": "NO!" },{"text" : "Rug è bell",  "text": "BRAVO!"}]';
+    $out = sendMsg($botToken,$chatId,"Mike o Rug?",$inlineKB,"inline");
+  break;
+    
 }
 ?>
