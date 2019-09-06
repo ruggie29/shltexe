@@ -27,18 +27,18 @@ $querydata = $query['data'];
 
 if($querydata = "povero")
 {
-  $out = sendMsg($botToken,$queryuser,"$query");
+  $out = sendMsg($botToken,$queryuser,"$update");
   //$inline2 = '[{"text" : "<<Indietro", "callback_data" : "back"},{"text" : "Dove Pullare", "callback_data" : "povero"}]';
   //$out = sendMsg($botToken,$queryuser,"Cazzo pulli che sei povero?",$inline2,"inline");
 }
-
+/*
 if($querydata = "back")
 {
   
     $inline2 = '[{"text" : "Vai su Google", "url" : "https://www.google.com"},{"text" : "Dove Pullare", "callback_data" : "no"}]';
     $out = sendMsg($botToken,$queryuser,"Sono tornato indietro",$inline2,"inline");
 }
-
+*/
 switch($testo)
 {
 
