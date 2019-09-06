@@ -35,7 +35,7 @@ if($querydata = "povero")
 if($querydata = "back")
 {
   
-    $inline2 = '[{"text" : "Vai su Google", "url" : "https://www.google.com"},{"text" : "Dove Pullare", "callback_data" : "povero"}]';
+    $inline2 = '[{"text" : "Vai su Google", "url" : "https://www.google.com"},{"text" : "Dove Pullare", "callback_data" : "no"}]';
     $out = sendMsg($botToken,$queryuser,"Sono tornato indietro",$inline2,"inline");
 }
 
