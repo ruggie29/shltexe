@@ -1,3 +1,4 @@
+<?php
 include "function.php";
 include "bandit.php";
 include "bot.php";
@@ -26,3 +27,4 @@ case 'Fungi':
      $out = sendMsg($botToken,$chatId,"Fungo");
     break;
 }
+?>
