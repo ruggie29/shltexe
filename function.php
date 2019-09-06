@@ -37,8 +37,8 @@ function editMsg($tkn,$cId,$msgId,$newText,$tastiera = null, $tipo = null){
     }
     
     
-    $TelegramUrlSendMessage = "https://api.telegram.org/".$tkn."/editMessageText?chat_id=".$cId."&message_id=".$msgId"&parse_mode=HTML&text=".urlencode($msgTxt).$reply_markup;
-
+    $TelegramUrlSendMessage = "https://api.telegram.org/".$tkn."/editMessageText?chat_id=".$cId."&message_id=".$msgId."&parse_mode=HTML&text=".urlencode($msgTxt).$reply_markup;
+                      
 
     return file_get_contents($TelegramUrlSendMessage);
 }
