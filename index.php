@@ -33,7 +33,7 @@ case 'Fungi':
 break;
 
   case '/inline':
-    $inlineKB = '[{"text" : "Vai su Google", "url" : "https://www.google.com"},{"text" : "Dove Pullare", "call_back_query" : "Sei povero"}]';
+    $inlineKB = '[{"text" : "Vai su Google", "url" : "https://www.google.com"},{"text" : "Dove Pullare", "callback_data" : "Sei povero"}]';
     $out = sendMsg($botToken,$chatId,"<b>Invio un messaggio con una inlineKeyboard!</b>",$inlineKB,"inline");
   break;
         
