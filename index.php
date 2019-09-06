@@ -24,10 +24,11 @@ $query = $update['callback_query'];
 $queryid = $query['id'];
 $queryuser = $query['from']['id'];
 $querydata = $query['data'];
+$querymsg = $query['message']['message_id'];
 
 if($querydata = "povero")
 {
-  $out = sendMsg($botToken,$queryuser,"$update");
+  $out = editMsg($botToken,$queryuser,$querymsg,"Povero");
   //$inline2 = '[{"text" : "<<Indietro", "callback_data" : "back"},{"text" : "Dove Pullare", "callback_data" : "povero"}]';
   //$out = sendMsg($botToken,$queryuser,"Cazzo pulli che sei povero?",$inline2,"inline");
 }
