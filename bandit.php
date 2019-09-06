@@ -1,6 +1,5 @@
 <?php
 
-$cacca = "mod";
 
 if(stristr($testo, $cacca) !== FALSE)
 {
