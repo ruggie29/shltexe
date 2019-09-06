@@ -38,6 +38,12 @@ $tag =  $MessageObj['from']['username'];
 //Creaiamo una replykeyboard
 //We create a replykeabord
 
+if(strpis($testo, 'cacca') === FALSE)
+{
+  $out = sendMsg($botToken,$chatId,"Vai in bagno");
+}
+
+
 switch($testo)
 {
   case '/staff':
@@ -58,7 +64,7 @@ Di seguito le informazioni:
 <b>Tag Telegram</b>: @$tag;");
     break;
   
-case 'fungi':
+case 'Fungi':
      $out = sendMsg($botToken,$chatId,"Fungo");
     break;
 }
