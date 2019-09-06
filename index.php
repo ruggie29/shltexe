@@ -5,7 +5,7 @@ $botToken = "bot"."969847936:AAEHT-nNJsOTRSyqhJeazDm3TCh1ZaBd1XU";
 
 //è necessario aggiungere bot prima del nostro token
 //You must add bot before our token
-include 'function.php'
+include "function.php";
 //Recuperiamo l'input che riceveremo dal bot
 //We retrieve the input we receive from bot
 $TelegramRawInput = file_get_contents("php://input");
