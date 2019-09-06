@@ -30,7 +30,7 @@ $MikeId = "424842427";
 $testo = $MessageObj['text'];
 $nome =  $MessageObj['from']['first_name'];
 $tag =  $MessageObj['from']['username'];
-
+$cacca = "cacca";
 //Salvo il json ricevuto per analizzarlo in seguito
 //We save the json received to parse it later
 //saveInJsonFile($update, "ricevuto.json");
@@ -38,7 +38,7 @@ $tag =  $MessageObj['from']['username'];
 //Creaiamo una replykeyboard
 //We create a replykeabord
 
-if(strpis($testo, "cacca") === FALSE)
+if(strpis($testo, $cacca) === FALSE)
 {
   $out = sendMsg($botToken,$chatId,"Vai in bagno");
 }
