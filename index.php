@@ -10,7 +10,7 @@ $update = json_decode($TelegramRawInput, TRUE);
 if(!$update)
 {
   //exit;
-}
+}""
 
 $MessageObj = $update['message'];
 $chatId = $MessageObj['chat']['id'];
@@ -25,6 +25,10 @@ $queryid = $query['id'];
 $queryuser = $query['from']['id'];
 $querydata = $query['data'];
 
+if($querydata == "Sei povero")
+{
+  $out = sendMsg($botToken,$chatId,"Sei povero");
+}
 
 switch($testo)
 {
