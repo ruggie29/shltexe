@@ -10,7 +10,7 @@ $update = json_decode($TelegramRawInput, TRUE);
 if(!$update)
 {
   //exit;
-}""
+}
 
 $MessageObj = $update['message'];
 $chatId = $MessageObj['chat']['id'];
@@ -19,16 +19,16 @@ $testo = $MessageObj['text'];
 $nome =  $MessageObj['from']['first_name'];
 $tag =  $MessageObj['from']['username'];
 $cacca = "mod";
-/*
+
 $query = $update['callback_query'];
 $queryid = $query['id'];
 $queryuser = $query['from']['id'];
 $querydata = $query['data'];
-*/
-//if($querydata = "povero")
-//{
-//  $out = sendMsg($botToken,$queryuser,"Sei povero");
-//}
+
+if($querydata = "povero")
+{
+  $out = sendMsg($botToken,$queryuser,"Sei povero");
+}
 
 switch($testo)
 {
