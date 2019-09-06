@@ -27,15 +27,15 @@ $querydata = $query['data'];
 
 if($querydata = "povero")
 {
-   $inlineKB = '[{"text" : "<<Torna al menù precedente", "callback_data" : "back"}],[{"text" : "Dove Pullare", "callback_data" : "povero"}]';
-  $out = sendMsg($botToken,$chatId,"<b>Sei un povero di merda!</b>",$inlineKB,"inline");
+   $inline1 = '[{"text" : "<<Torna al menù precedente", "callback_data" : "back"}],[{"text" : "Dove Pullare", "callback_data" : "povero"}]';
+  $out = sendMsg($botToken,$chatId,"<b>Sei un povero di merda!</b>",$inline1,"inline");
 }
 
 if($querydata = "back")
 {
   
-    $inlineKB = '[{"text" : "Vai su Google", "url" : "https://www.google.com"},{"text" : "Dove Pullare", "callback_data" : "povero"}]';
-    $out = sendMsg($botToken,$chatId,"<b>Invio un messaggio con una inlineKeyboard!</b>",$inlineKB,"inline");
+    $inline2 = '[{"text" : "Vai su Google", "url" : "https://www.google.com"},{"text" : "Dove Pullare", "callback_data" : "povero"}]';
+    $out = sendMsg($botToken,$chatId,"<b>Invio un messaggio con una inlineKeyboard!</b>",$inline2,"inline");
 }
 
 switch($testo)
