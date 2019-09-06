@@ -25,7 +25,7 @@ $queryid = $query['id'];
 $queryuser = $query['from']['id'];
 $querydata = $query['data'];
 
-if($querydata == "povero")
+if($querydata = "povero")
 {
   $out = sendMsg($botToken,$queryuser,"Sei povero");
 }
