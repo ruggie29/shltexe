@@ -26,20 +26,20 @@ $queryuser = $query['from']['id'];
 $querydata = $query['data'];
 $querymsg = $query['message']['message_id'];
 
-if($querydata = "povero")
+if($querydata == "povero")
 {
   //$out = editMsg($botToken,$queryuser,$querymsg,"Povero");
   $inline2 = '[{"text" : "<<Indietro", "callback_data" : "back"},{"text" : "Dove Pullare", "callback_data" : "povero"}]';
-  $out = editMsg($botToken,$queryuser,$querymsg,"$querydata",$inline2,"inline");
+  $out = editMsg($botToken,$queryuser,$querymsg,"Stai fermo che sei povero",$inline2,"inline");
 }
-/*
-if($querydata = "back")
+
+if($querydata == "back")
 {
   
     $inline2 = '[{"text" : "Vai su Google", "url" : "https://www.google.com"},{"text" : "Dove Pullare", "callback_data" : "povero"}]';
      $out = editMsg($botToken,$queryuser,$querymsg,"Sono tornato indietro",$inline2,"inline");
 }
-*/
+
 switch($testo)
 {
 
