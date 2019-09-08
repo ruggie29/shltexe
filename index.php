@@ -62,6 +62,18 @@ if($querydata == "Sì")
 Stato: 	\xE2\x9D\x8C",$inline2,"inline");
 }
 
+if($querydata == "risolto")
+{
+  
+    $inline2 = '[{"text" : "Riapri ", "callback_data" : "Sì"}]';
+     $out = editMsg($botToken,$queryuser,$querymsg,"Un utente ha richiesto assistenza:
+\xF0\x9F\x97\xBF : $queryname
+\xF0\x9F\x91\xA4 : @$querytag
+\xF0\x9F\x93\x94 : $queryuser
+
+Stato: 	\xE2\x9C\x85",$inline2,"inline");
+}
+
 switch($testo)
 {
 
