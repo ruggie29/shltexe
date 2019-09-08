@@ -1,6 +1,5 @@
 <?php
 
-include "function.php";
 
  $cacca = 'cacca';
 
