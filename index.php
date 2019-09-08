@@ -15,17 +15,19 @@ if(!$update)
 $MessageObj = $update['message'];
 $chatId = $MessageObj['chat']['id'];
 $MikeId = "424842427";
-$testo = $MessageObj['text'];
+public $testo = $MessageObj['text'];
 $nome =  $MessageObj['from']['first_name'];
 $tag =  $MessageObj['from']['username'];
 $cacca = "mod";
-$Globals = $testo;
+
 
 $query = $update['callback_query'];
 $queryid = $query['id'];
 $queryuser = $query['from']['id'];
 $querydata = $query['data'];
 $querymsg = $query['message']['message_id'];
+
+$out = sendMsg($botToken,$chatId,"$cacca");
 
 if($querydata == "povero")
 {
