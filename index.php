@@ -101,7 +101,7 @@ switch($testo)
 {
 
 case 'Fungi':
-     $out = sendMsg($botToken,$msxid,"Fungo");
+     $out = sendMsg($botToken,$chatId,"Fungo");
    //  $inlineKB = '[{"text" : "Vai su Google", "url" : "https://www.google.com"},{"text" : "Vai al Blog", "url" : "https://ettoremorettiblog.it"}]';
    // $out = sendMsg($botToken,$chatId,"Invio un messaggio con una inlineKeyboard!",$inlineKB,"inline");
 break;
@@ -117,7 +117,7 @@ break;
     break;
     
   case 'id':
-    $out = sendMsg($botToken,$msxid,"Eccolo:$chatId");
+    $out = sendMsg($botToken,$chatId,"Eccolo:$chatId");
     break;
     
            
