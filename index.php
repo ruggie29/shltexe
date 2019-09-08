@@ -12,7 +12,7 @@ if(!$update)
   //exit;
 }
 
-public $testo;
+//public $testo;
 
 $MessageObj = $update['message'];
 $chatId = $MessageObj['chat']['id'];
