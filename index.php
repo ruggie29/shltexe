@@ -15,7 +15,7 @@ if(!$update)
 //public $testo;
 
 $MessageObj = $update['message'];
-$chatId = $update['chat']['id'];
+$chatId = $MessageObj['chat']['id'];
 //$MikeId = "424842427";
 $testo = $MessageObj['text'];
 $nome =  $MessageObj['from']['first_name'];
