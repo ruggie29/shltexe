@@ -48,6 +48,13 @@ if($querydata == "back")
      $out = editMsg($botToken,$queryuser,$querymsg,"Cosa vuoi fare?",$inline2,"inline");
 }
 
+if($querydata == "Sì")
+{
+  
+    $inline2 = '[{"text" : "Risolto \xE2\x9D\x8E", "callback_data" : "risolto"}]';
+     $out = editMsg($botToken,$queryuser,$querymsg,"Segnalazione effettuata da @$tag",$inline2,"inline");
+}
+
 switch($testo)
 {
 
@@ -61,6 +68,12 @@ break;
     $inlineKB = '[{"text" : "Vai su Google", "url" : "https://www.google.com"},{"text" : "Dove Pullare", "callback_data" : "povero"}]';
     $out = sendMsg($botToken,$chatId,"Cosa vuoi fare?",$inlineKB,"inline");
   break;
+    
+  case '/assistenza':
+     $inlineKB = '[{"text" : "Sì", "callback_data" : "Sì"},{"text" : "No", "callback_data" : "No"}]';
+    $out = sendMsg($botToken,$chatId,"Sei sicuro di voler richiedere assistenza?",$inlineKB,"inline");
+    break;
+    
         
 }
 ?>
