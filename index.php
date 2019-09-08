@@ -102,9 +102,13 @@ break;
     
   case '/assistenza':
      $inlineKB = '[{"text" : "Sì", "callback_data" : "Sì"},{"text" : "No", "callback_data" : "No"}]';
-    $out = sendMsg($botToken,$chatId,"Sei sicuro di voler richiedere assistenza?",$inlineKB,"inline");
+    ,$inlineKB,"inline");
     break;
     
-        
+  case 'id':
+    $out = sendMsg($botToken,$chatId,"$chatId");
+    break;
+    
+           
 }
 ?>
