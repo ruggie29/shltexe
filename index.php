@@ -12,10 +12,12 @@ if(!$update)
   //exit;
 }
 
+public $testo;
+
 $MessageObj = $update['message'];
 $chatId = $MessageObj['chat']['id'];
 $MikeId = "424842427";
-public $testo = $MessageObj['text'];
+$testo = $MessageObj['text'];
 $nome =  $MessageObj['from']['first_name'];
 $tag =  $MessageObj['from']['username'];
 $cacca = "mod";
