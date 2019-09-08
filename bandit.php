@@ -1,10 +1,7 @@
 <?php
 
 
- $cacca = 'cacca';
+ $bandit1 = 'cacca';
 
-if(stristr($testo, $cacca) !== FALSE)
-{
-  $out = sendMsg($botToken,$chatId,"Vai in bagno");
-}
+
 ?>
