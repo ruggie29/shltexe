@@ -1,5 +1,6 @@
 <?php
 
+ $cacca = 'cacca';
 
 if(stristr($testo, $cacca) !== FALSE)
 {
