@@ -1,6 +1,6 @@
 <?php
 
-function sendMsg($tkn, $cId, $msgTxt, $tastiera = null, $tipo = null){
+public function sendMsg($tkn, $cId, $msgTxt, $tastiera = null, $tipo = null){
     
     $reply_markup = "";
 
@@ -24,7 +24,7 @@ function sendMsg($tkn, $cId, $msgTxt, $tastiera = null, $tipo = null){
     file_put_contents($filename,json_encode($data,JSON_PRETTY_PRINT));
 }
 
-function editMsg($tkn,$cId,$msgId,$newText,$tastiera = null, $tipo = null){
+public function editMsg($tkn,$cId,$msgId,$newText,$tastiera = null, $tipo = null){
     
         $reply_markup = "";
 
