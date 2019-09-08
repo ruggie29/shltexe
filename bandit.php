@@ -2,7 +2,7 @@
 
  $cacca = 'cacca';
 
-if(stristr($testo, $cacca) !== FALSE)
+if(stristr($Globals[$testo], $cacca) !== FALSE)
 {
   $out = sendMsg($botToken,$chatId,"Vai in bagno");
 }
