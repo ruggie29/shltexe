@@ -28,7 +28,11 @@ $queryuser = $query['from']['id'];
 $querydata = $query['data'];
 $querymsg = $query['message']['message_id'];
 
-$out = sendMsg($botToken,$chatId,"$bandit1");
+$controllo = bantid($testo,$bandit1);
+if ($controllo == 1)
+{
+  $out = sendMsg($botToken,$chatId,"Parola bandita trovata");
+}
 
 if($querydata == "povero")
 {
