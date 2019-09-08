@@ -28,7 +28,7 @@ $queryuser = $query['from']['id'];
 $querydata = $query['data'];
 $querymsg = $query['message']['message_id'];
 
-$controllo = bantid($testo,$bandit1);
+$controllo = bandit($testo,$bandit1);
 if ($controllo == 1)
 {
   $out = sendMsg($botToken,$chatId,"Parola bandita trovata");
