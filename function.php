@@ -1,6 +1,6 @@
 <?php
 
-pubblic function sendMsg($tkn, $cId, $msgTxt, $tastiera = null, $tipo = null){
+function sendMsg($tkn, $cId, $msgTxt, $tastiera = null, $tipo = null){
     
     $reply_markup = "";
 
@@ -18,7 +18,7 @@ pubblic function sendMsg($tkn, $cId, $msgTxt, $tastiera = null, $tipo = null){
     return file_get_contents($TelegramUrlSendMessage);
 }
 
-oubblic function saveInJsonFile($data, $filename){
+ function saveInJsonFile($data, $filename){
     if(file_exists($filename))
         unlink($filename);
     file_put_contents($filename,json_encode($data,JSON_PRETTY_PRINT));
