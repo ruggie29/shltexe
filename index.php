@@ -27,6 +27,7 @@ $queryid = $query['id'];
 $queryuser = $query['from']['id'];
 $querydata = $query['data'];
 $querymsg = $query['message']['message_id'];
+$querytag = $query['from']['username'];
 
 $controllo = bandit($testo,$bandit1);
 if ($controllo == 1)
@@ -51,8 +52,10 @@ if($querydata == "back")
 if($querydata == "Sì")
 {
   
-    $inline2 = '[{"text" : "Risolto \xE2\x9D\x8E", "callback_data" : "risolto"}]';
-     $out = editMsg($botToken,$queryuser,$querymsg,"Segnalazione effettuata da @$tag",$inline2,"inline");
+    $inline2 = '[{"text" : "Risolto ", "callback_data" : "risolto"}]';
+     $out = editMsg($botToken,$queryuser,$querymsg,"Segnalazione effettuata da @$querytag
+
+Stato: \xE2\x9D\x8E",$inline2,"inline");
 }
 
 switch($testo)
