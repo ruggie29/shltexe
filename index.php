@@ -55,7 +55,7 @@ if($querydata == "Sì")
 {
   
     $inline2 = '[{"text" : "Risolto ", "callback_data" : "risolto"}]';
-     $out = sendMsg($botToken,$querychat,"Un utente ha richiesto assistenza:
+     $out = sendMsg($botToken,$queryid,"Un utente ha richiesto assistenza:
 \xF0\x9F\x97\xBF : $queryname
 \xF0\x9F\x91\xA4 : @$querytag
 \xF0\x9F\x93\x94 : $queryuser
