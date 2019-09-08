@@ -42,4 +42,11 @@ function editMsg($tkn,$cId,$msgId,$newText,$tastiera = null, $tipo = null){
     return file_get_contents($TelegramUrlSendMessage);
 }
 
+function bandit($testo,$bandit)
+{
+if(stristr($testo, $bandit) === FALSE) {
+    return 1;
+  }
+}
+
 ?>
