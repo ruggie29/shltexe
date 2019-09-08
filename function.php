@@ -24,7 +24,7 @@ public function sendMsg($tkn, $cId, $msgTxt, $tastiera = null, $tipo = null){
     file_put_contents($filename,json_encode($data,JSON_PRETTY_PRINT));
 }
 
-public function editMsg($tkn,$cId,$msgId,$newText,$tastiera = null, $tipo = null){
+function editMsg($tkn,$cId,$msgId,$newText,$tastiera = null, $tipo = null){
     
         $reply_markup = "";
 
@@ -36,10 +36,10 @@ public function editMsg($tkn,$cId,$msgId,$newText,$tastiera = null, $tipo = null
         }
     }
     
-    
     $TelegramUrlSendMessage = "https://api.telegram.org/".$tkn."/editMessageText?chat_id=".$cId."&message_id=".$msgId."&parse_mode=HTML&text=".urlencode($newText).$reply_markup;
                       
 
     return file_get_contents($TelegramUrlSendMessage);
 }
+
 ?>
