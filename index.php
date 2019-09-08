@@ -54,12 +54,20 @@ if($querydata == "Sì")
 {
   
     $inline2 = '[{"text" : "Risolto ", "callback_data" : "risolto"}]';
-     $out = $out = sendMsg($botToken,$queryuser,"Un utente ha richiesto assistenza:
+     $out = sendMsg($botToken,$queryuser,"Un utente ha richiesto assistenza:
 \xF0\x9F\x97\xBF : $queryname
 \xF0\x9F\x91\xA4 : @$querytag
 \xF0\x9F\x93\x94 : $queryuser
 
 Stato: 	\xE2\x9D\x8C",$inline2,"inline");
+  
+  $out = sendMsg($botToken,"159645625","Un utente ha richiesto assistenza:
+\xF0\x9F\x97\xBF : $queryname
+\xF0\x9F\x91\xA4 : @$querytag
+\xF0\x9F\x93\x94 : $queryuser
+
+Stato: 	\xE2\x9D\x8C",$inline2,"inline");
+  
 }
 
 if($querydata == "Aperto")
