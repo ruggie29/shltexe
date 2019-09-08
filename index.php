@@ -115,8 +115,7 @@ break;
     break;
     
   case 'id':
-      $inlineKB = '[{"text" : "Sì", "callback_data" : "Sì"},{"text" : "No", "callback_data" : "No"}]';
-    $out = sendMsg($botToken,$chatId,"Eccolo:$chatId",$inlineKB,"inline");
+    $out = sendMsg($botToken,$chatId,"Eccolo:$chatId");
     break;
     
            
