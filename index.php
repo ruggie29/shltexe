@@ -54,6 +54,18 @@ if($querydata == "Sì")
 {
   
     $inline2 = '[{"text" : "Risolto ", "callback_data" : "risolto"}]';
+     $out = $out = sendMsg($botToken,$queryuser,"Un utente ha richiesto assistenza:
+\xF0\x9F\x97\xBF : $queryname
+\xF0\x9F\x91\xA4 : @$querytag
+\xF0\x9F\x93\x94 : $queryuser
+
+Stato: 	\xE2\x9D\x8C",$inline2,"inline");
+}
+
+if($querydata == "Aperto")
+{
+  
+    $inline2 = '[{"text" : "Risolto ", "callback_data" : "risolto"}]';
      $out = editMsg($botToken,$queryuser,$querymsg,"Un utente ha richiesto assistenza:
 \xF0\x9F\x97\xBF : $queryname
 \xF0\x9F\x91\xA4 : @$querytag
@@ -65,7 +77,7 @@ Stato: 	\xE2\x9D\x8C",$inline2,"inline");
 if($querydata == "risolto")
 {
   
-    $inline2 = '[{"text" : "Riapri ", "callback_data" : "Sì"}]';
+    $inline2 = '[{"text" : "Riapri ", "callback_data" : "Aperto"}]';
      $out = editMsg($botToken,$queryuser,$querymsg,"Un utente ha richiesto assistenza:
 \xF0\x9F\x97\xBF : $queryname
 \xF0\x9F\x91\xA4 : @$querytag
