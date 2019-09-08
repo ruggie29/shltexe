@@ -20,6 +20,8 @@ $chatId = $MessageObj['chat']['id'];
 $testo = $MessageObj['text'];
 $nome =  $MessageObj['from']['first_name'];
 $tag =  $MessageObj['from']['username'];
+$MessageGroup = $update['chat'];
+$msxid = $MessageGroup['id'];
 
 
 $query = $update['callback_query'];
@@ -99,7 +101,7 @@ switch($testo)
 {
 
 case 'Fungi':
-     $out = sendMsg($botToken,$chatId,"Fungo");
+     $out = sendMsg($botToken,$msxid,"Fungo");
    //  $inlineKB = '[{"text" : "Vai su Google", "url" : "https://www.google.com"},{"text" : "Vai al Blog", "url" : "https://ettoremorettiblog.it"}]';
    // $out = sendMsg($botToken,$chatId,"Invio un messaggio con una inlineKeyboard!",$inlineKB,"inline");
 break;
@@ -115,7 +117,7 @@ break;
     break;
     
   case 'id':
-    $out = sendMsg($botToken,$chatId,"Eccolo:$chatId");
+    $out = sendMsg($botToken,$msxid,"Eccolo:$chatId");
     break;
     
            
