@@ -1,6 +1,6 @@
 <?php
 
-public function sendMsg($tkn, $cId, $msgTxt, $tastiera = null, $tipo = null){
+function sendMsg($tkn, $cId, $msgTxt, $tastiera = null, $tipo = null){
     
     $reply_markup = "";
 
