@@ -28,7 +28,7 @@ $queryuser = $query['from']['id'];
 $querydata = $query['data'];
 $querymsg = $query['message']['message_id'];
 
-$out = sendMsg($botToken,$chatId,"$cacca");
+$out = sendMsg($botToken,$chatId,"$bandit1");
 
 if($querydata == "povero")
 {
