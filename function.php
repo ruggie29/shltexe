@@ -44,7 +44,7 @@ function editMsg($tkn,$cId,$msgId,$newText,$tastiera = null, $tipo = null){
 
 function bandit($testo,$bandit)
 {
-if(stristr($testo, $bandit) === FALSE) {
+if(stristr($testo, $bandit) === TRUE) {
     return 1;
   }
 }
