@@ -24,7 +24,7 @@ function sendMsg($tkn, $cId, $msgTxt, $tastiera = null, $tipo = null){
     file_put_contents($filename,json_encode($data,JSON_PRETTY_PRINT));
 }
 
-pubblic function editMsg($tkn,$cId,$msgId,$newText,$tastiera = null, $tipo = null){
+function editMsg($tkn,$cId,$msgId,$newText,$tastiera = null, $tipo = null){
     
         $reply_markup = "";
 
