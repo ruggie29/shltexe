@@ -115,7 +115,7 @@ break;
     break;
     
   case 'id':
-    $out = sendMsg($botToken,$chatId,"Eccolo:$chatId");
+    $out = sendMsg($botToken,$chatId,"Eccolo:$chatId",null,null);
     break;
     
            
