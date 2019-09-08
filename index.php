@@ -19,6 +19,7 @@ $testo = $MessageObj['text'];
 $nome =  $MessageObj['from']['first_name'];
 $tag =  $MessageObj['from']['username'];
 $cacca = "mod";
+$Globals = $testo;
 
 $query = $update['callback_query'];
 $queryid = $query['id'];
