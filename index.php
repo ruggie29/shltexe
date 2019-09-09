@@ -140,6 +140,10 @@ break;
     $out = sendMsg($botToken,$chatId,"Sono: $result");
   break;
   
+   case 'dio':
+    $out = replayMsg($botToken,$chatId,"Porco");
+     break;
+  
 
     
            
