@@ -143,7 +143,7 @@ break;
   
    case 'dio':
     $out = replayMsg($botToken,$chatId,$msxId,"Porco");
-    $out = sendMsg($botToken,$chatId,"$msxId");
+    
      break;
   
 
