@@ -16,6 +16,7 @@ if(!$update)
 
 $MessageObj = $update['message'];
 $chatId = $MessageObj['chat']['id'];
+$msxId = $MessageObj['id'];
 //$MikeId = "424842427";
 $testo = $MessageObj['text'];
 $nome =  $MessageObj['from']['first_name'];
@@ -141,7 +142,7 @@ break;
   break;
   
    case 'dio':
-    $out = replayMsg($botToken,$chatId,"Porco");
+    $out = replayMsg($botToken,$chatId,$msxId,"Porco");
      break;
   
 
