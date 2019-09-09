@@ -77,4 +77,11 @@ function getmembers ($tkn,$cId,$userId)
     
 }
 
+function getAllert ($tkn,$queryId,$msgTxt)
+{
+    
+    $TelegramUrlSendMessage = "https://api.telegram.org/".$tkn."/answerCallbackQuery?callback_query_id=".$cId."&text=".$msgTxt."&show_alert=TRUE";  
+    
+    return file_get_contents($TelegramUrlSendMessage);
+}
 ?>
