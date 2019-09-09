@@ -126,6 +126,11 @@ break;
     $result =$finale['result'];
     $out = sendMsg($botToken,$chatId,"Sono: $result");
   break;
+  
+  case : '/info':
+    $info = getmembers($botToken,'159645625');
+    $out = sendMsg($botToken,$chatId,"$info");
+  break;
     
            
 }
