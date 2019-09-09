@@ -56,7 +56,7 @@ function countmembers ($tkn,$cId)
 
     $int=file_get_contents($TelegramUrlSendMessage);
     
-    $result = $int['result'];
+    $result = $int['ok'];
     
     return $result;
 }
