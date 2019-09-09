@@ -84,12 +84,22 @@ function getAllert ($tkn,$queryId,$msgTxt)
     
     return file_get_contents($TelegramUrlSendMessage);
 }
-
-function replayMsg ($tkn,$cId,$msgTxt)
-{
-    //reply_to_message_id=".$msgId."
-    $TelegramUrlSendMessage = "https://api.telegram.org/".$tkn."//sendMessage?&chat_id=".$cId."&text=".urlencode($msgTxt);
+//reply_to_message_id=".$msgId."
+function replayMsg ($tkn, $cId, $msgTxt, $tastiera = null, $tipo = null){
     
+    $reply_markup = "";
+
+    if($tastiera != null ){
+        if($tipo == "inline"){
+            $reply_markup = '&reply_markup={"inline_keyboard":['.$tastiera.'],"resize_keyboard":true}';
+        }elseif($tipo == "reply"){
+            $reply_markup = '&reply_markup={"keyboard":['.$tastiera.'],"resize_keyboard":true}';
+        }
+    }
+    
+    $TelegramUrlSendMessage = "https://api.telegram.org/".$tkn."/sendMessage?chat_id=".$cId."&parse_mode=HTML&text=".urlencode($msgTxt).$reply_markup;
+
+
     return file_get_contents($TelegramUrlSendMessage);
 }
 ?>
