@@ -51,7 +51,7 @@ if ($controllo == 1)
 if($querydata == "povero")
 {
   //$out = editMsg($botToken,$queryuser,$querymsg,"Povero");
-  $inline2 = '[{"text" : "<<Indietro", "callback_data" : "back"},{"text" : "Dove Pullare", "callback_data" : "povero"}]';
+  $inline2 = '[{"text" : "<<Indietro", "callback_data" : "back"},{"text" : "Dove Pullare", "callback_data" : "povero", "show_allert" : true}]';
   $out = editMsg($botToken,$queryuser,$querymsg,"Stai fermo che sei povero",$inline2,"inline");
 }
 
@@ -136,12 +136,7 @@ break;
     $out = sendMsg($botToken,$chatId,"Sono: $result");
   break;
   
-  case '/info':
-    $info = getmembers($botToken,'-1001469403482','773826549');
-    $finale = json_decode($info, TRUE);
-    $result =$finale['result']['status'];
-    $out = sendMsg($botToken,$chatId,"$result");
-  break;
+
     
            
 }
