@@ -32,6 +32,7 @@ $queryname = $query['from']['first_name'];
 $querymsg = $query['message']['message_id'];
 $querytag = $query['from']['username'];
 $querychat = $query['chat']['id'];
+$queryallert = $query['callback_query_id'];
 
  $info = getmembers($botToken,'-1001469403482','773826549');
  $finale = json_decode($info, TRUE);
@@ -53,7 +54,7 @@ if($querydata == "povero")
   //$out = editMsg($botToken,$queryuser,$querymsg,"Povero");
  // $inline2 = '[{"text" : "<<Indietro", "callback_data" : "back"},{"text" : "Dove Pullare", "callback_data" : "povero", "show_allert" : true}]';
  // $out = editMsg($botToken,$queryuser,$querymsg,"Stai fermo che sei povero",$inline2,"inline");
- $out= getAllert ($botToken,$querychat,"Povero");
+ $out= getAllert ($botToken,$queryallert,"Povero");
   
 }
 
