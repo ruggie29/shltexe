@@ -58,7 +58,7 @@ function countmembers ($tkn,$cId)
     
     $result = $int['result'];
     
-    retutn $result;
+    return $result;
 }
 
 ?>
