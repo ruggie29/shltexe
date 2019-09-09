@@ -49,4 +49,12 @@ if(stristr($testo, $bandit) !== FALSE) {
   }
 }
 
+function countmembers ($tkn,$cId)
+{
+    
+    $TelegramUrlSendMessage = "https://api.telegram.org/".$tkn."/getChatMembersCount?chat_id=".$cId;                      
+
+    return file_get_contents($TelegramUrlSendMessage);
+}
+
 ?>
