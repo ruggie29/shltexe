@@ -85,9 +85,9 @@ function getAllert ($tkn,$queryId,$msgTxt)
     return file_get_contents($TelegramUrlSendMessage);
 }
 
-function replayMsg ($tkn,$cId, $msgTxt)
+function replayMsg ($tkn,$cId,$msgId, $msgTxt)
 {
-    $TelegramUrlSendMessage = "https://api.telegram.org/".$tkn."/reply_to_message?chat_id=".$cId."&parse_mode=HTML&text=".urlencode($msgTxt);
+    $TelegramUrlSendMessage = "https://api.telegram.org/".$tkn."//sendMessage?chat_id=".$cId."&reply_to_message=".$msgId."&parse_mode=HTML&text=".urlencode($msgTxt);
     
     return file_get_contents($TelegramUrlSendMessage);
 }
