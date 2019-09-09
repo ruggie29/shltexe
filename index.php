@@ -121,7 +121,7 @@ break;
     break;
   
   case '\conta':
-    $count = countmembers($botToken,$chatId);
+    $count = 3; //countmembers($botToken,$chatId);
     $out = sendMsg($botToken,$chatId,"Sono: $count");
   break;
     
