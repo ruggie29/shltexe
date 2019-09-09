@@ -130,7 +130,7 @@ break;
   case '/info':
     $info = getmembers($botToken,'-1001469403482','773826549');
     $finale = json_decode($info, TRUE);
-    $result =$finale ['result']['status'];
+    $result =$finale['result']['status'];
     $out = sendMsg($botToken,$chatId,"$result");
   break;
     
