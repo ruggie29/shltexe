@@ -44,7 +44,7 @@ if($sticker != '')
   {
   $out = replayMsg($botToken,$chatId,$msxId,"/war");
   }
-     else{
+     elseif{
      $out = replayMsg($botToken,$chatId,$msxId,"/del");
      }
 }
