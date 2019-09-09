@@ -119,6 +119,11 @@ break;
   case 'id':
     $out = sendMsg($botToken,$chatId,"Eccolo:$chatId");
     break;
+  
+  case '\conta':
+    $count = countmembers($botToken,$chatId);
+    $out = sendMsg($botToken,$chatId,"Sono: $count");
+  break;
     
            
 }
