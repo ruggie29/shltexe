@@ -53,7 +53,7 @@ if($querydata == "povero")
   //$out = editMsg($botToken,$queryuser,$querymsg,"Povero");
  // $inline2 = '[{"text" : "<<Indietro", "callback_data" : "back"},{"text" : "Dove Pullare", "callback_data" : "povero", "show_allert" : true}]';
  // $out = editMsg($botToken,$queryuser,$querymsg,"Stai fermo che sei povero",$inline2,"inline");
- $out= getAllert ($botToken,$queryuser,"Povero");
+ $out= getAllert ($botToken,$querychat,"Povero");
   
 }
 
