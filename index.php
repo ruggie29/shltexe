@@ -36,10 +36,17 @@ $querychat = $query['chat']['id'];
 $queryallert = $query['callback_query_id'];
 
 $sticker= $MessageObj['sticker'];
+$animated = $sticker['is_animated'];
 
 if($sticker != '')
 {
-  $out = replayMsg($botToken,$chatId,$msxId,"/del");
+  if{$animated == 'true')
+  {
+  $out = replayMsg($botToken,$chatId,$msxId,"/war");
+  }
+     else{
+     $out = replayMsg($botToken,$chatId,$msxId,"/del");
+     }
 }
 
  $info = getmembers($botToken,'-1001469403482','773826549');
