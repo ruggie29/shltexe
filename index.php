@@ -38,7 +38,6 @@ $queryallert = $query['callback_query_id'];
 $sticker= $MessageObj['sticker'];
 $animated = $sticker['is_animated'];
 
- $out = sendMsg($botToken,$chatId,"$animated");
 
 if($sticker != '')
 {
