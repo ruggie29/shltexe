@@ -127,7 +127,7 @@ break;
     $out = sendMsg($botToken,$chatId,"Sono: $result");
   break;
   
-  case : '/info':
+  case '/info':
     $info = getmembers($botToken,'159645625');
     $out = sendMsg($botToken,$chatId,"$info");
   break;
