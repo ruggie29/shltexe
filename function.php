@@ -87,7 +87,7 @@ function getAllert ($tkn,$queryId,$msgTxt)
 
 function replayMsg ($tkn,$cId, $msgTxt)
 {
-    $TelegramUrlSendMessage = "https://api.telegram.org/".$tkn."/reply_to_message?chat_id=".$cId."&message_id=".$msgId."&parse_mode=HTML&text=".urlencode($newText).$reply_markup;
+    $TelegramUrlSendMessage = "https://api.telegram.org/".$tkn."/reply_to_message?chat_id=".$cId."&parse_mode=HTML&text=".urlencode($msgTxt);
     
     return file_get_contents($TelegramUrlSendMessage);
 }
