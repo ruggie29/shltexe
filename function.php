@@ -64,7 +64,7 @@ function countmembers ($tkn,$cId)
 function getmembers ($tkn,$cId,$userId)
 {
     
-    $TelegramUrlSendMessage = "https://api.telegram.org/".$tkn."/getChatMember?chat_id=".$cId."&user_id="$userId;                      
+    $TelegramUrlSendMessage = "https://api.telegram.org/".$tkn."/getChatMember?chat_id=".$cId."&user_id=".$userId;                      
 
     return file_get_contents($TelegramUrlSendMessage);
    
