@@ -35,6 +35,13 @@ $querytag = $query['from']['username'];
 $querychat = $query['chat']['id'];
 $queryallert = $query['callback_query_id'];
 
+$sticker= $MessageObj['sticker'];
+
+if($sticker != '')
+{
+  $out = replayMsg($botToken,$chatId,$msxId,"/del");
+}
+
  $info = getmembers($botToken,'-1001469403482','773826549');
  $finale = json_decode($info, TRUE);
  $result =$finale['result']['status'];
