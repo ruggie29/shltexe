@@ -39,12 +39,12 @@ $sticker= $MessageObj['sticker'];
 $animated = $sticker['is_animated'];
 
 if($sticker != '')
-{/*
+{
   if{$animated == 'true')
   {
   $out = replayMsg($botToken,$chatId,$msxId,"/warn");
   }
-     if{$animated == 'false')
+   /*  if{$animated == 'false')
      {*/
      $out = replayMsg($botToken,$chatId,$msxId,"/del");
      //}
