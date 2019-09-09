@@ -22,7 +22,7 @@ $testo = $MessageObj['text'];
 $nome =  $MessageObj['from']['first_name'];
 $tag =  $MessageObj['from']['username'];
 $MessageGroup = $update['chat'];
-$msxid = $MessageGroup['id'];
+
 
 
 $query = $update['callback_query'];
