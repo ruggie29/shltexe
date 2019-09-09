@@ -36,12 +36,12 @@ $querychat = $query['chat']['id'];
  $info = getmembers($botToken,'-1001469403482','773826549');
  $finale = json_decode($info, TRUE);
  $result =$finale['result']['status'];
-
+/*
 if($result == "kicked")
 {
   $out = sendMsg($botToken,$chatId,"L'utente ha abbandonato la chat");
 }
-
+*/
 $controllo = bandit($testo,$bandit1);
 if ($controllo == 1)
 {
