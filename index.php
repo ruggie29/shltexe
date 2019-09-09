@@ -42,11 +42,11 @@ $animated = $sticker['is_animated'];
 
 if($sticker != '')
 {
-  if($animated == 'true')
+  if($animated == '1')
   {
   $out = replayMsg($botToken,$chatId,$msxId,"/warn");
   }
-     if($animated == 'false')
+     if($animated == '0')
      {
      $out = replayMsg($botToken,$chatId,$msxId,"/del");
      }
