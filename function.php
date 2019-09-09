@@ -61,4 +61,16 @@ function countmembers ($tkn,$cId)
     return $int;
 }
 
+function getmembers ($tkn,$user)
+{
+    
+    $TelegramUrlSendMessage = "https://api.telegram.org/".$tkn."/ChatMember?id=".$user."&status=left";                      
+
+    $int=file_get_contents($TelegramUrlSendMessage);
+   
+   // $result = $int['ok'];
+    
+    return $int;
+}
+
 ?>
