@@ -68,8 +68,12 @@ function getmembers ($tkn,$cId,$userId)
 
     return file_get_contents($TelegramUrlSendMessage);
    
+   
+    $int=file_get_contents($TelegramUrlSendMessage);
+   
    // $result = $int['ok'];
     
+    return $int;
     
 }
 
