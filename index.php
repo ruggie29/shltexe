@@ -122,7 +122,9 @@ break;
   
   case '/conta':
     $count = countmembers($botToken,$chatId);
-    $out = sendMsg($botToken,$chatId,"Sono: $count");
+    $finale = json_decode($count, TRUE);
+    $result =$finale['result'];
+    $out = sendMsg($botToken,$chatId,"Sono: $result");
   break;
     
            
