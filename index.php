@@ -40,14 +40,14 @@ $animated = $sticker['is_animated'];
 
 if($sticker != '')
 {
-  if{$animated == 'true')
+  if($animated == 'true')
   {
   $out = replayMsg($botToken,$chatId,$msxId,"/warn");
   }
-   /*  if{$animated == 'false')
-     {*/
+     if($animated == 'false')
+     {
      $out = replayMsg($botToken,$chatId,$msxId,"/del");
-     //}
+     }
 }
 
  $info = getmembers($botToken,'-1001469403482','773826549');
