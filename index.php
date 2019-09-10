@@ -160,9 +160,12 @@ break;
     $out = replayMsg($botToken,$chatId,$msxId,"Porco");
     break;
     
-  case '/menu':
+  case '/start':
    $replyKB = '["Dio","Id"],["Assistenza"],["Pull"]';
-    $out = sendMsg($botToken,$chatId,"Cosa vuoi fare?",$replyKB,"reply");
+    $out = sendMsg($botToken,$chatId,"Benvenuto nel bot di supporto!
+La tua tastiera è stata modificata per permetterti di inserire i comandi che questo bot può fare.
+Se utilizzi una versione di telegram che non supporta questa modifica scrivi /menu per richiamare la lista dei comandi.
+",$replyKB,"reply");
       
     
      break;
