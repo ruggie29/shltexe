@@ -118,7 +118,7 @@ if($querydata == "risolto")
 {
   
     $inline2 = '[{"text" : "Riapri ", "callback_data" : "Aperto"}]';
-     $out = editMsg($botToken,$queryuser,$querymsg,"Un utente ha richiesto assistenza:
+     $out = editMsg($botToken,"-326569289",$querymsg,"Un utente ha richiesto assistenza:
 \xF0\x9F\x97\xBF : $queryname
 \xF0\x9F\x91\xA4 : @$querytag
 \xF0\x9F\x93\x94 : $queryuser
