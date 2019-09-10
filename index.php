@@ -4,8 +4,10 @@ include "bandit.php";
 include "bot.php";
 
 $TelegramRawInput = file_get_contents("php://input");
+$TelegramMexBot = file_get_contents("inviato.json");
 
 $update = json_decode($TelegramRawInput, TRUE);
+$botout =  json_decode($TelegramMexBot, TRUE);
 
 if(!$update)
 {
@@ -37,6 +39,8 @@ $queryallert = $query['callback_query_id'];
 
 $sticker= $MessageObj['sticker'];
 $animated = $sticker['is_animated'];
+
+saveInJsonFile($update, "ricevuto.json");
 
 
 if($sticker != '')
@@ -169,9 +173,13 @@ Se utilizzi una versione di telegram che non supporta questa modifica scrivi /me
       
     
      break;
-  
-
-    
+     
            
 }
+
+if($out <> "")
+{
+saveInJsonFile($botout, "inviato.json");
+}
+
 ?>
