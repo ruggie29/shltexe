@@ -123,7 +123,7 @@ if($querydata == "risolto")
 \xF0\x9F\x91\xA4 : @$querytag
 \xF0\x9F\x93\x94 : $queryuser
 
-Stato: 	\xE2\x9C\x85",$inline2,"inline");
+Stato: 	\xE2\x9C\x85 da: @$querytag ",$inline2,"inline");
 }
 
 switch($testo)
