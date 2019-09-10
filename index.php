@@ -135,17 +135,17 @@ case 'Fungi':
    // $out = sendMsg($botToken,$chatId,"Invio un messaggio con una inlineKeyboard!",$inlineKB,"inline");
 break;
 
-  case '/inline':
+  case 'Pull':
     $inlineKB = '[{"text" : "Vai su Google", "url" : "https://www.google.com"},{"text" : "Dove Pullare", "callback_data" : "povero"}]';
     $out = sendMsg($botToken,$chatId,"Cosa vuoi fare?",$inlineKB,"inline");
   break;
     
-  case '/assistenza':
+  case 'Assistenza':
      $inlineKB = '[{"text" : "Sì", "callback_data" : "Sì"},{"text" : "No", "callback_data" : "No"}]';
     $out = sendMsg($botToken,$chatId,"Sei sicuro di voler richiedere assistenza?",$inlineKB,"inline");
     break;
     
-  case 'id':
+  case 'Id':
     $out = sendMsg($botToken,$chatId,"Eccolo:$chatId");
     break;
   
@@ -156,13 +156,13 @@ break;
     $out = sendMsg($botToken,$chatId,"Sono: $result");
   break;
   
-   case 'dio':
+   case 'Dio':
     $out = replayMsg($botToken,$chatId,$msxId,"Porco");
     break;
     
   case '/menu':
-    $inlineKB = '[{"text" : "Vai su Google", "url" : "https://www.google.com"},{"text" : "Dove Pullare", "callback_data" : "povero"}]';
-    $out = sendMsg($botToken,$chatId,"Cosa vuoi fare?",$inlineKB,"reply");
+   $replyKB = '["Dio","Id"],["Assistenza"],["Pull"]';
+    $out = sendMsg($botToken,$chatId,"Cosa vuoi fare?",$replyKB,"reply");
       
     
      break;
