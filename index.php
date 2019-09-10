@@ -158,6 +158,12 @@ break;
   
    case 'dio':
     $out = replayMsg($botToken,$chatId,$msxId,"Porco");
+    break;
+    
+  case '/menu':
+    $inlineKB = '[{"text" : "Vai su Google", "url" : "https://www.google.com"},{"text" : "Dove Pullare", "callback_data" : "povero"}]';
+    $out = sendMsg($botToken,$chatId,"Cosa vuoi fare?",$inlineKB,"reply");
+      
     
      break;
   
