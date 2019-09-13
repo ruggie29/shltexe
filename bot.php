@@ -1,5 +1,5 @@
 <?php
 
-$botToken = "bot"."969847936:AAEHT-nNJsOTRSyqhJeazDm3TCh1ZaBd1XU";
+$botToken = "bot"."957983144:AAEQJu4RnIYyNNGjN8Bl6B3hzBMJe_i8s0k";
 
 ?>
